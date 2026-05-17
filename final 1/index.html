@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 class="title">✨ Task Manager</h1>
+
+        <button class="add-btn" onclick="openAddModal()">+ Add Task</button>
+
+        <div id="taskList" class="task-list"></div>
+    </div>
+
+    <!-- Modal -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content glass">
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <h2 id="modalTitle">Add Task</h2>
+
+            <input type="text" id="title" placeholder="Task Title">
+            <textarea id="description" placeholder="Description"></textarea>
+
+            <select id="status">
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+
+            <button id="saveBtn" onclick="saveTask()">Save Task</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
